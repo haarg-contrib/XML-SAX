@@ -3,7 +3,6 @@
 package XML::SAX::PurePerl::Reader::Stream;
 
 use strict;
-use vars qw(@ISA);
 
 use XML::SAX::PurePerl::Reader qw(
     EOF
@@ -15,7 +14,7 @@ use XML::SAX::PurePerl::Reader qw(
 );
 use XML::SAX::Exception;
 
-@ISA = ('XML::SAX::PurePerl::Reader');
+our @ISA = ('XML::SAX::PurePerl::Reader');
 
 # subclassed by adding 1 to last element
 use constant FH => 8;

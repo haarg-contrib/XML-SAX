@@ -6,9 +6,8 @@ use strict;
 use XML::SAX::PurePerl::Reader::URI;
 use Exporter ();
 
-use vars qw(@ISA @EXPORT_OK);
-@ISA = qw(Exporter);
-@EXPORT_OK = qw(
+our @ISA = qw(Exporter);
+our @EXPORT_OK = qw(
     EOF
     BUFFER
     LINE

@@ -6,7 +6,6 @@ use warnings;
 use File::Path;
 use Fatal qw(open close chdir mkpath);
 use XML::SAX;
-use vars qw(*FILE);
 
 is(scalar(@{XML::SAX->parsers}), 0, 'no known parsers');
 ok(XML::SAX->add_parser(q(XML::SAX::PurePerl)), 'added PurePerl');
@@ -61,8 +60,8 @@ done_testing();
 
 sub write_file {
     my ($file, $data) = @_;
-    open(FILE, ">$file");
-    print FILE $data;
-    print FILE "\n";
-    close FILE;
+    open(my $FILE, ">", $file);
+    print $FILE $data;
+    print $FILE "\n";
+    close $FILE;
 }

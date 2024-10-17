@@ -3,9 +3,8 @@
 package XML::SAX::PurePerl;
 
 use strict;
-use vars qw/$VERSION/;
 
-$VERSION = '1.02';
+our $VERSION = '1.02';
 
 use XML::SAX::PurePerl::Productions qw($NameChar $SingleChar);
 use XML::SAX::PurePerl::Reader;
@@ -27,8 +26,7 @@ else {
     require XML::SAX::PurePerl::UnicodeExt;
 }
 
-use vars qw(@ISA);
-@ISA = ('XML::SAX::Base');
+our @ISA = ('XML::SAX::Base');
 
 my %int_ents = (
         amp => '&',

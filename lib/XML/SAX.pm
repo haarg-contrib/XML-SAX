@@ -3,14 +3,13 @@
 package XML::SAX;
 
 use strict;
-use vars qw($VERSION @ISA @EXPORT_OK);
 
-$VERSION = '1.02';
+our $VERSION = '1.02';
 
 use Exporter ();
-@ISA = ('Exporter');
+our @ISA = ('Exporter');
 
-@EXPORT_OK = qw(Namespaces Validation);
+our @EXPORT_OK = qw(Namespaces Validation);
 
 use File::Basename qw(dirname);
 use File::Spec ();

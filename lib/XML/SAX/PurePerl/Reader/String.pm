@@ -3,7 +3,6 @@
 package XML::SAX::PurePerl::Reader::String;
 
 use strict;
-use vars qw(@ISA);
 
 use XML::SAX::PurePerl::Reader qw(
     LINE
@@ -13,7 +12,7 @@ use XML::SAX::PurePerl::Reader qw(
     EOF
 );
 
-@ISA = ('XML::SAX::PurePerl::Reader');
+our @ISA = ('XML::SAX::PurePerl::Reader');
 
 use constant DISCARDED  => 8;
 use constant STRING     => 9;

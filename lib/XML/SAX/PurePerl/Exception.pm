@@ -6,9 +6,7 @@ use strict;
 
 use overload '""' => "stringify";
 
-use vars qw/$StackTrace/;
-
-$StackTrace = $ENV{XML_DEBUG} || 0;
+our $StackTrace = $ENV{XML_DEBUG} || 0;
 
 sub throw {
     my $class = shift;
